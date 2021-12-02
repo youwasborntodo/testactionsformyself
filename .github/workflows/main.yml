@@ -9,8 +9,9 @@ jobs:
       uses: actions/checkout@main
       with:
           submodules: recursive
-    - name: Build and Deploy
-      uses: ApolloZhu/hexo-deploy-action@master
+    - name: Hexo Deploy Action
+      uses: renzhaosy/hexo-deploy-action@0.0.1
+
       env:
         PERSONAL_TOKEN: ${{ secrets.TESTACTION  }}
         PUBLISH_REPOSITORY: dev4mobile/dev4mobile.github.io # The repository the action should deploy to.
