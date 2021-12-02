@@ -8,6 +8,7 @@
   },
   "homepage": "https://youwasborntodo.github.io/github_action_demo",
   "dependencies": {
+    "@jamesives/github-pages-deploy-action": "^4.1.6",
     "vue": "^3.2.16"
   },
   "devDependencies": {
