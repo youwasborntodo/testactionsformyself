@@ -1,19 +1,18 @@
 name: GitHub Actions Build and Deploy Demo
 on:
-  push:
-    branches:
-      - main
+  [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@main
-
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.7
+      with:
+          submodules: recursive
+    - name: Build and Deploy
+      uses: ApolloZhu/hexo-deploy-action@master
       env:
-        ACCESS_TOKEN: ${{ secrets.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 }}
-        BRANCH: gh-pages
-        FOLDER: dist
-        BUILD_SCRIPT: npm install && npm run build
+        PERSONAL_TOKEN: ${{ secrets.GH_TOKEN }}
+        PUBLISH_REPOSITORY: dev4mobile/dev4mobile.github.io # The repository the action should deploy to.
+        BRANCH: master # The branch the action should deploy to.
+        PUBLISH_DIR: ./public # The folder the action should deploy.
