@@ -13,4 +13,4 @@ jobs:
         with:
           token: ${{ secrets.TESTACTION  }}
           branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
+          folder: deploy # The folder the action should deploy.
