@@ -8,11 +8,9 @@ jobs:
         uses: actions/checkout@main
         with:
           submodules: recursive
-      - name: Hexo Deploy Action
-        uses: renzhaosy/hexo-deploy-action@0.0.1
-
-        env:
-          PERSONAL_TOKEN: ${{ secrets.TESTACTION  }}
-          PUBLISH_REPOSITORY: dev4mobile/dev4mobile.github.io # The repository the action should deploy to.
-          BRANCH: main # The branch the action should deploy to.
-          PUBLISH_DIR: ./public # The folder the action should deploy.
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          token: ${{ secrets.TESTACTION  }}
+          branch: deploy # The branch the action should deploy to.
+          folder: ./build # The folder the action should deploy.
