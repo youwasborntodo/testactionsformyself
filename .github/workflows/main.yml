@@ -6,11 +6,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
-        with:
-          submodules: recursive
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           token: ${{ secrets.TESTACTION  }}
           branch: gh-pages # The branch the action should deploy to.
-          folder: deploy # The folder the action should deploy.
+          folder: build # The folder the action should deploy.
