@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Brian
+ * @Date: 2021-12-02 17:11:23
+ * @LastEditors: Brian
+ * @LastEditTime: 2021-12-03 14:21:30
+-->
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -6,7 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <HelloWorld msg="构建测试！Hello Vue 3 + Vite" />
 </template>
 
 <style>
