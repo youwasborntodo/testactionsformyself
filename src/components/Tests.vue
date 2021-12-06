@@ -4,7 +4,7 @@
  * @Autor: Brian
  * @Date: 2021-12-06 17:09:39
  * @LastEditors: Brian
- * @LastEditTime: 2021-12-06 17:35:31
+ * @LastEditTime: 2021-12-06 17:50:07
 -->
 <script>
 import { defineComponent, toRefs, onMounted } from 'vue'
@@ -17,7 +17,7 @@ export default defineComponent({
     const state = toRefs(data)
     console.log(state, 'state--->')
     onMounted(()  => {
-      console.log('this----mounted->')
+      console.log('this----mounted->123')
     })
     return {
       ...state
