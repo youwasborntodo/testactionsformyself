@@ -4,7 +4,7 @@
  * @Autor: Brian
  * @Date: 2021-12-02 17:11:23
  * @LastEditors: Brian
- * @LastEditTime: 2021-12-03 14:21:30
+ * @LastEditTime: 2021-12-06 16:47:04
 -->
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
@@ -16,7 +16,18 @@ import HelloWorld from './components/HelloWorld.vue'
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="构建测试！Hello Vue 3 + Vite" />
 </template>
+<script>
+import { defineComponent, reactive } from 'vue'
 
+export default defineComponent({
+  setup() {
+    const state = reactive({
+      name: 'testViteDropTheConsole'
+    })
+    console.log(state, 'state--->')
+  }
+})
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
